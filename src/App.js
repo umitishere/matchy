@@ -4,11 +4,18 @@ import Form from "./components/Form.js";
 
 function App() {
 
-  const [names, setNames] = useState([]);
+  const [names, setNames] = useState(["asd"]);
+
+  const handleFormSubmit = (submittedName) => {
+    setNames((prevState) => ([
+      ...prevState, submittedName
+    ]))
+  }
 
   return (
       <main>
-        <Form />
+
+        <Form onSubmit={handleFormSubmit} />
       </main>
     );
 }
