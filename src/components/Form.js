@@ -27,7 +27,7 @@ const Form = (props) => {
             <input id="groupSize" type="number" onChange={numberChangeHandler} />
             <br />
 
-            <button type="button" onClick={() => props.onSubmit(inputName)}>Add</button>
+            <button type="button" onClick={() => props.onSubmit(inputName, groupSize)}>Add</button>
             <br />
         </form>
     )
