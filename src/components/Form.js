@@ -6,6 +6,8 @@ const Form = () => {
             <label htmlFor="nameToMatch">Name</label>
             <br />
             <input id="nameToMatch" type="text" />
+            <br />
+            <button type="button">Add</button>
         </form>
     )
 }
