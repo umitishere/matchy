@@ -4,7 +4,7 @@ import Form from "./components/Form.js";
 
 function App() {
 
-  const [names, setNames] = useState(["asd"]);
+  const [names, setNames] = useState([]);
 
   const handleFormSubmit = (submittedName) => {
     setNames((prevState) => ([
@@ -13,11 +13,13 @@ function App() {
   }
 
   return (
-      <main>
-
-        <Form onSubmit={handleFormSubmit} />
-      </main>
-    );
+    <main>
+      <Form onSubmit={handleFormSubmit} />
+      {
+        names.map((name) => <li key={Math.random() * 100}>{name}</li>)
+      }
+    </main>
+  );
 }
 
 export default App;
